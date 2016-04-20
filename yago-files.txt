@@ -1,0 +1,33 @@
+# taxonomy
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoTaxonomy.ttl.7z
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoTypes.ttl.7z
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoSchema.ttl.7z
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoTransitiveType.ttl.7z
+
+# core
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoFacts.ttl.7z
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoLiteralFacts.ttl.7z
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoLabels.ttl.7z
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoDateFacts.ttl.7z
+
+# geonames
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoGeonamesClasses.ttl.7z
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoGeonamesOnlyData.ttl.7z
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoGeonamesTypes.ttl.7z
+
+# meta
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoSources.ttl.7z
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoMetaFacts.ttl.7z
+
+# link
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoPreferredMeanings.ttl.7z
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoWordnetDomainHierarchy.ttl.7z
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoWordnetDomains.ttl.7z
+
+# other
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoConteXtFacts_en.ttl.7z
+
+# wikipedia
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoInfoboxTemplateAttributes_en.ttl.7z
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoInfoboxAttributes_en.ttl.7z
+http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yagoWikipediaInfo_en.ttl.7z
