@@ -10,7 +10,7 @@ IFS=$'\n\t'
 # per line. Blank lines and lines beginning with the hash "#" are
 # ignored.
 
-YAGO_MANIFEST=yago-files.txt
+YAGO_MANIFEST=yago.manifest
 YAGO_DIR=ttl
 
 # load the file manifest
