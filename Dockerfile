@@ -1,8 +1,10 @@
 FROM markbnj/apache-jena:3.0.1
 MAINTAINER betz.mark@gmail.com
 
-RUN mkdir -p /var/data/yago && \
-    curl -o /tmp/yago3_entire_ttl.7z http://resources.mpi-inf.mpg.de/yago-naga/yago/download/yago/yago3_entire_ttl.7z && \
+RUN apk add --update p7zip && \
+    mkdir -p /var/yago/tdf
 
+ADD ttl /var/yago/ttl
+ADD extract.sh /usr/local/bin/
 
-ENTRYPOINT ["fuseki-server", "--update"]
+RUN /usr/local/bin/extract.sh /var/yago/ttl
