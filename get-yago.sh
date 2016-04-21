@@ -13,23 +13,12 @@ IFS=$'\n\t'
 YAGO_MANIFEST=yago-files.txt
 YAGO_DIR=ttl
 
-# check that the commands we need to run are present
-ensure_prereqs() {
-    if ! hash 7za 2>/dev/null; then
-        echo "Error: '7za' command not found."
-        echo "This program requires p7zip-full to be installed."
-        exit 1
-    fi
-}
-
-ensure_prereqs
-
 # load the file manifest
 if [ ! -e ${YAGO_MANIFEST} ]; then
-    echo "Yago manifest file ${YAGO_MANIFEST} not found; exiting."
+    echo "YAGO manifest file ${YAGO_MANIFEST} not found; exiting."
     exit 1
 else
-    echo "Syncing YAGO database files with ${YAGO_MANIFEST}..."
+    echo "Synching YAGO files with ${YAGO_MANIFEST}..."
 fi
 if [ ! -e ${YAGO_DIR} ]; then
     mkdir ${YAGO_DIR}
@@ -40,25 +29,14 @@ while IFS=''; read -r file_url || [[ -n "$file_url" ]]; do
             IFS=' '
             parts=(${file_url//\// })
             file_name=${parts[-1]}
-            let "len=${#file_name} - 3"
-            uc_file_name=${file_name:0:$len}
-            printf "$uc_file_name "
-            if [ -e "${YAGO_DIR}/${uc_file_name}" ]; then
+            printf "$file_name "
+            if [ -e "${YAGO_DIR}/${file_name}" ]; then
                 printf "OK\n"
             else
-                if [ ! -e "${YAGO_DIR}/${file_name}" ]; then
-                    printf "downloading... "
-                    curl -s -o ${YAGO_DIR}/${file_name} $file_url
-                fi
-                printf "extracting... "
-                cwd=$(pwd)
-                cd ${YAGO_DIR}
-                r=$(7za e ${file_name})
-                rm ${file_name}
-                cd ${cwd}
+                printf "downloading... "
+                curl -s -o ${YAGO_DIR}/${file_name} $file_url
                 printf "OK\n"
             fi
         fi
     fi
 done < "./${YAGO_MANIFEST}"
-echo "Completed"
